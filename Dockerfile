@@ -3,7 +3,8 @@
 FROM debian:jessie
 MAINTAINER Andy Pemberton <apemberton@cloudbees.com>
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get -y upgrade
+RUN apt-get install -y --no-install-recommends \
     openjdk-7-jdk \
     openssh-server \
     curl \
