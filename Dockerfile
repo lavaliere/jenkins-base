@@ -11,7 +11,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ntpdate  \
     git  \
     maven  \
-    less
+    less  \
+    vim
+
+RUN printf "AddressFamily inet" >> /etc/ssh/ssh_config 
+ENV MAVEN_HOME /usr/bin/mvn
+ENV GIT_HOME /usr/bin/git
 
 # Install Docker client
 RUN curl https://get.docker.io/builds/Linux/x86_64/docker-latest -o /usr/local/bin/docker
