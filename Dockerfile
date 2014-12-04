@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     ntp \
     ntpdate  \
-    git
+    git  \
+    maven
 
 # Install Docker client
 RUN curl https://get.docker.io/builds/Linux/x86_64/docker-latest -o /usr/local/bin/docker
